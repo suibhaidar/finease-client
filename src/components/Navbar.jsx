@@ -1,9 +1,118 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
+
+
+    const navLinks = (
+        <>
+            <li>
+                <NavLink to="/" className="font-medium text-[#1C352D] hover:text-[#5C7AEA]">
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/add-transaction" className="font-medium hover:text-[#5C7AEA]">
+                    Add Transaction
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/my-transactions" className="font-medium hover:text-[#5C7AEA]">
+                    My Transactions
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/reports" className="font-medium hover:text-[#5C7AEA]">
+                    Reports
+                </NavLink>
+            </li>
+        </>
+    );
+
     return (
         <div>
-            <h1>navbar</h1>
+            <div className="navbar bg-[#d8e3f0] shadow-sm">
+                <div className="navbar-start">
+                    {/* <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        </div>
+                        <ul
+                            tabIndex="-1"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            {navLinks}
+                        </ul>
+                    </div> */}
+                    <div className="navbar-start flex items-center relative">
+                        <img src="https://i.ibb.co.com/JRT4DXCK/Adobe-Express-file.png" alt="FinEase Logo" className="w-12 h-12 rounded-full" />
+                        <Link to="/" className="text-2xl font-bold text-[#1C352D] absolute left-7">
+                            <span className="text-[#61839B]">Fin</span>Ease
+                        </Link>
+                    </div>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        {navLinks}
+                    </ul>
+                </div>
+                <div className="navbar-end">
+
+                    <div className='flex space-x-3'>
+                       <div className='flex items-center gap-3'>
+                         <input type="checkbox" defaultChecked className="toggle" />
+                        <img
+                                src={
+                        "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
+                                alt="User"
+                                className="w-9 h-9 rounded-full border-2 border-[#5C7AEA]"
+                                title={'user.name'}
+                            />
+                       </div>
+                        <div className="space-x-3 mt-2 hidden lg:flex">
+                            <Link to="/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
+                                Login
+                            </Link>
+                            <Link
+                                to="/register"
+                                className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
+                            >
+                                Signup
+                            </Link>
+
+                            
+                        </div>
+                        
+                            
+                            
+                       
+                    </div>
+
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        </div>
+                        <ul
+                            tabIndex="-1"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            {navLinks}
+                            <div className="flex space-x-3 mt-2">
+                                <Link to="/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
+                                    Login
+                                </Link>
+                                <Link
+                                    to="/register"
+                                    className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
+                                >
+                                    Signup
+                                </Link>
+
+                                
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
