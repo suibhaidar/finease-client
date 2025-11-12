@@ -7,7 +7,7 @@ const Navbar = () => {
     const navLinks = (
         <>
             <li>
-                <NavLink to="/" className="font-medium text-[#1C352D] hover:text-[#5C7AEA]">
+                <NavLink to="/" className="font-medium text-[#0e2820] hover:text-[#5C7AEA]">
                     Home
                 </NavLink>
             </li>
