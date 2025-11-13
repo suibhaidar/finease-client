@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 import AddTransaction from "../pages/AddTransaction";
 import MyTransactions from "../pages/MyTransactions";
 import Reports from "../pages/Reports";
+import AuthLayout from "../Layouts/AuthLayout";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 
@@ -27,6 +30,20 @@ import Reports from "../pages/Reports";
             {
                 path:'reports',
                 element: <Reports/>
+            }
+        ]
+    },
+    {
+        path: '/auth',
+        element:<AuthLayout/>,
+        children:[
+            {
+                path:'/auth/login',
+                element:<Login/>
+            },
+            {
+                path:'/auth/register',
+                element:<Register/>
             }
         ]
     }

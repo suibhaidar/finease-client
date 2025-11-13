@@ -69,11 +69,11 @@ const Navbar = () => {
                             />
                        </div>
                         <div className="space-x-3 mt-2 hidden lg:flex">
-                            <Link to="/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
+                            <Link to="/auth/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
                                 Login
                             </Link>
                             <Link
-                                to="/register"
+                                to="/auth/register"
                                 className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
                             >
                                 Signup
@@ -96,11 +96,11 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             {navLinks}
                             <div className="flex space-x-3 mt-2">
-                                <Link to="/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
+                                <Link to="/auth/login" className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]">
                                     Login
                                 </Link>
                                 <Link
-                                    to="/register"
+                                    to="/auth/register"
                                     className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
                                 >
                                     Signup
