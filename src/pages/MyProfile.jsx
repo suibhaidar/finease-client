@@ -29,7 +29,7 @@ const MyProfile = () => {
     return (
         <div className="flex justify-center w-96 mx-auto mt-14 px-4">
             <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
-                <h1 className="text-3xl font-bold text-center text-[#1e293b] mb-8">
+                <h1 className="text-3xl font-bold text-center text-[#1C352D] mb-8">
                     My Profile
                 </h1>
                 <div className="flex flex-col items-center mb-8">
@@ -67,7 +67,7 @@ const MyProfile = () => {
                     </div>
                     <button
                         onClick={handleUpdateProfile}
-                        className="w-full py-3 bg-[#3b82f6] text-white font-semibold rounded-lg hover:bg-[#2563eb] transition shadow-md"
+                        className="bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full text-white font-semibold py-2 rounded-lg hover:bg-[#2563eb] transition shadow-md"
                     >
                         Update Profile
                     </button>

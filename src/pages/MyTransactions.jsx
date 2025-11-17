@@ -70,14 +70,14 @@ const MyTransactions = () => {
 
 
                                 <Link to={`/transaction/${item._id}`}>
-                                    <button className="btn btn-sm btn-info text-white">
+                                    <button className="btn btn-sm bg-green-800 text-white">
                                         View Details
                                     </button>
                                 </Link>
 
 
                                 <Link to={`/transaction/update/${item._id}`}>
-                                    <button className="btn btn-sm btn-warning">
+                                    <button className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white">
                                         Update
                                     </button>
                                 </Link>
@@ -85,7 +85,7 @@ const MyTransactions = () => {
 
                                 <button
                                     onClick={() => handleDelete(item._id)}
-                                    className="btn btn-sm btn-error text-white"
+                                    className="btn btn-sm bg-red-800 text-white"
                                 >
                                     Delete
                                 </button>
