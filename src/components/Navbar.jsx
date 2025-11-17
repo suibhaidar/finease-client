@@ -6,8 +6,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = use(AuthContext)
-
+    const { user } = use(AuthContext);
 
     const handleLogout = () => {
         signOut(auth)
@@ -22,65 +21,97 @@ const Navbar = () => {
                     Home
                 </NavLink>
             </li>
-            <li>
-                <NavLink to="/add-transaction" className="font-medium hover:text-[#5C7AEA]">
-                    Add Transaction
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/my-transactions" className="font-medium hover:text-[#5C7AEA]">
-                    My Transactions
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/reports" className="font-medium hover:text-[#5C7AEA]">
-                    Reports
-                </NavLink>
-            </li>
+
+            {user && (
+                <>
+                    <li>
+                        <NavLink to="/add-transaction" className="font-medium hover:text-[#5C7AEA]">
+                            Add Transaction
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/my-transactions" className="font-medium hover:text-[#5C7AEA]">
+                            My Transactions
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/reports" className="font-medium hover:text-[#5C7AEA]">
+                            Reports
+                        </NavLink>
+                    </li>
+                </>
+            )}
         </>
     );
 
     return (
-        <div>
-            <div className="navbar bg-[#d8e3f0] shadow-sm">
+        <div className="bg-[#d8e3f0] shadow-sm">
+            <div className="navbar container mx-auto px-3">
+
+                {/* LEFT */}
                 <div className="navbar-start">
-                    <div className="navbar-start flex items-center relative">
-                        <img src="https://i.ibb.co.com/JRT4DXCK/Adobe-Express-file.png" alt="FinEase Logo" className="w-12 h-12 rounded-full" />
+                    <div className="flex items-center relative">
+                        <img
+                            src="https://i.ibb.co.com/JRT4DXCK/Adobe-Express-file.png"
+                            alt="FinEase Logo"
+                            className="w-12 h-12 rounded-full"
+                        />
                         <Link to="/" className="text-2xl font-bold text-[#1C352D] absolute left-7">
                             <span className="text-[#61839B]">Fin</span>Ease
                         </Link>
                     </div>
                 </div>
+
+                {/* CENTER */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navLinks}
                     </ul>
                 </div>
+
+                {/* RIGHT */}
                 <div className="navbar-end flex items-center gap-3">
 
                     <input type="checkbox" defaultChecked className="toggle" />
 
                     {user ? (
                         <>
-                            <Link to="/auth/myProfile" className="btn btn-outline btn-sm">
+                            {/* My Profile - Desktop + Mobile */}
+                            <Link
+                                to="/auth/myProfile"
+                                className="btn btn-outline btn-sm hidden lg:block"
+                            >
                                 My Profile
                             </Link>
+
+                            {/* Avatar Dropdown */}
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-9 h-9 rounded-full border-2 border-[#5C7AEA]">
+                                    <div className="w-10 rounded-full border-2 border-[#5C7AEA]">
                                         <img
-                                            src={user.photoURL ? user.photoURL : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
-                                            alt={user.displayName || "User"}
+                                            src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
+                                            alt="User"
                                         />
                                     </div>
                                 </div>
+
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content mt-3 z-10 p-3 shadow bg-base-100 rounded-box w-52 border-3 border-[#1C352D]"
+                                    className="menu menu-sm dropdown-content mt-3 z-20 p-3 shadow bg-base-100 rounded-box w-52 border-[3px] border-[#1C352D]"
                                 >
-                                    <li className=''><img className='w-24 h-22 rounded-[50%]' src={user.photoURL} alt="" /></li>
-                                    <li className="font-semibold text-gray-700"> Name:{user.displayName}</li>
-                                    <li className="text-sm text-gray-500">Email:{user.email}</li>
+                                    <li className="flex justify-center mb-2">
+                                        <img
+                                            className="w-20 h-20 rounded-full"
+                                            src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
+                                            alt="User"
+                                        />
+                                    </li>
+                                    <li className="font-semibold text-gray-700">
+                                        Name: {user.displayName || "User"}
+                                    </li>
+                                    <li className="text-sm text-gray-500">
+                                        Email: {user.email}
+                                    </li>
                                     <li>
                                         <button
                                             onClick={handleLogout}
@@ -93,7 +124,6 @@ const Navbar = () => {
                             </div>
                         </>
                     ) : (
-                        // Login / Signup buttons
                         <div className="space-x-3 hidden lg:flex">
                             <Link
                                 to="/auth/login"
@@ -103,17 +133,19 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/auth/register"
-                                className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
+                                className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white"
                             >
                                 Signup
                             </Link>
                         </div>
                     )}
+
+                    {/* Mobile Dropdown */}
                     <div className="dropdown dropdown-end lg:hidden">
                         <div tabIndex={0} className="btn btn-ghost">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-10 w-5"
+                                className="h-7 w-7"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -122,17 +154,19 @@ const Navbar = () => {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="2"
-                                    d="M4 6h16M4 12h8m-8 6h16"
+                                    d="M4 6h16M4 12h16M4 18h16"
                                 />
                             </svg>
                         </div>
+
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-20 mt-3 w-56 p-3 shadow"
                         >
                             {navLinks}
+
                             {!user && (
-                                <div className="flex space-x-3 mt-2">
+                                <div className="flex flex-col gap-2 mt-2">
                                     <Link
                                         to="/auth/login"
                                         className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]"
@@ -141,15 +175,33 @@ const Navbar = () => {
                                     </Link>
                                     <Link
                                         to="/auth/register"
-                                        className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white border-none"
+                                        className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white"
                                     >
                                         Signup
                                     </Link>
                                 </div>
                             )}
+
+                            {user && (
+                                <div className="flex flex-col gap-2 mt-2">
+                                    <Link
+                                        to="/auth/myProfile"
+                                        className="btn btn-outline btn-sm"
+                                    >
+                                        My Profile
+                                    </Link>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="btn btn-sm bg-[#1C352D] text-white"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     );

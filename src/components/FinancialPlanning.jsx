@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, BarChart3, ShieldCheck, TrendingUp, Clock, Wallet } from "lucide-react";
 
 const points = [
@@ -37,8 +36,8 @@ const points = [
 const FinancialPlanning = () => {
     return (
         <section className="bg-gray-50 py-16 px-6 md:px-20 text-center md:text-left">
-            <div className="max-w-4xl mx-auto">
-
+            <div className="max-w-5xl mx-auto">
+                {/* head */}
                 <div className="relative inline-block">
                     <span
                         className="px-5 py-4 pr-24 font-medium text-white block"
@@ -63,7 +62,7 @@ const FinancialPlanning = () => {
                     Financial planning isn’t just about money — it’s about building a stress-free life.
                     These key points highlight why financial planning is so essential.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4 text-left">
                     {points.map((point, index) => (
                         <div
                             key={index}
