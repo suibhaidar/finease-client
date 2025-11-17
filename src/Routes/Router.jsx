@@ -7,6 +7,10 @@ import Reports from "../pages/Reports";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import UpdateTransaction from "../pages/UpdateTransaction";
+import TDetails from "../pages/TDetails";
+import MyProfile from "../pages/MyProfile";
+
 
 
 
@@ -30,6 +34,14 @@ import Register from "../pages/Register";
             {
                 path:'reports',
                 element: <Reports/>
+            },
+            {
+                path:'transaction/update/:id',
+                element:<UpdateTransaction></UpdateTransaction>
+            },
+            {
+                path:'transaction/:id',
+                element:<TDetails/>
             }
         ]
     },
@@ -44,7 +56,13 @@ import Register from "../pages/Register";
             {
                 path:'/auth/register',
                 element:<Register/>
+            },
+            {
+                path:'/auth/myProfile',
+                element:<MyProfile/>
             }
+           
+            
         ]
     }
 ])

@@ -1,9 +1,12 @@
 import React from 'react';
+import Overview from '../components/Overview';
 
 const Home = () => {
     return (
         <div>
-            <h1>home</h1>
+            <section>
+                 <Overview/>
+            </section>
         </div>
     );
 };
