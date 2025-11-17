@@ -48,7 +48,7 @@ const UpdateTransaction = () => {
             });
     };
 
-    
+    if (!transaction) return <p className="text-center mt-10">Loading...</p>;
 
     const formattedDate = transaction.date?.slice(0, 10) || "";
 
@@ -86,7 +86,7 @@ const UpdateTransaction = () => {
                     <input type="date" name="date" defaultValue={formattedDate} className="input input-bordered w-full" />
                 </div>
 
-                <button className="btn btn-primary w-full mt-3">Update</button>
+                <button className="btn btn-primary bg-[#00C9E5] w-full mt-3">Update</button>
             </form>
         </div>
     );
