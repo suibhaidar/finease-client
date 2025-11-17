@@ -40,27 +40,43 @@ const Overview = () => {
 
     return (
         <div className="bg-gradient-to-br from-[#61839B] to-[#1C352D] py-10 px-6 md:px-16">
-            <h2 className="text-3xl font-bold text-center text- mb-10">
-                Overview
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-blue-500">
-                    <Wallet className="w-10 h-10 text-blue-500 mb-3" />
-                    <h3 className="text-xl font-semibold text-gray-700">Total Balance</h3>
-                    <p className="text-2xl font-bold text-gray-900 mt-2">${overview.balance}</p>
-                </div>
+            <div className="max-w-5xl mx-auto flex flex-col justify-center">
+                <div className="relative inline-block mb-3">
+                    <span
+                        className="px-5 py-4 pr-24 font-semibold bg-white text-[#1C352D] block"
 
-                <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-green-500">
-                    <ArrowDownCircle className="w-10 h-10 text-green-500 mb-3" />
-                    <h3 className="text-xl font-semibold text-gray-700">Total Income</h3>
-                    <p className="text-2xl font-bold text-gray-900 mt-2">${overview.totalIncome}</p>
+                    >
+                        Overview
+                    </span>
+                    <span
+                        className="absolute top-0 right-0 h-full w-24 flex items-center justify-center text-xl text-white"
+                        style={{
+                            background: "#1C352D",
+                            clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                        }}
+                    >
+                        
+                    </span>
                 </div>
-                <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-red-500">
-                    <ArrowUpCircle className="w-10 h-10 text-red-500 mb-3" />
-                    <h3 className="text-xl font-semibold text-gray-700">Total Expenses</h3>
-                    <p className="text-2xl font-bold text-gray-900 mt-2">${overview.totalExpenses}</p>
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+                    <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-blue-500">
+                        <Wallet className="w-10 h-10 text-blue-500 mb-3" />
+                        <h3 className="text-xl font-semibold text-gray-700">Total Balance</h3>
+                        <p className="text-2xl font-bold text-gray-900 mt-2">${overview.balance}</p>
+                    </div>
 
+                    <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-green-500">
+                        <ArrowDownCircle className="w-10 h-10 text-green-500 mb-3" />
+                        <h3 className="text-xl font-semibold text-gray-700">Total Income</h3>
+                        <p className="text-2xl font-bold text-gray-900 mt-2">${overview.totalIncome}</p>
+                    </div>
+                    <div className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 flex flex-col items-center border-t-4 border-red-500">
+                        <ArrowUpCircle className="w-10 h-10 text-red-500 mb-3" />
+                        <h3 className="text-xl font-semibold text-gray-700">Total Expenses</h3>
+                        <p className="text-2xl font-bold text-gray-900 mt-2">${overview.totalExpenses}</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
