@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import Loading from "./Loading";
 
 const UpdateTransaction = () => {
     const { id } = useParams();
@@ -48,7 +49,7 @@ const UpdateTransaction = () => {
             });
     };
 
-    if (!transaction) return <p className="text-center mt-10">Loading...</p>;
+    if (!transaction) return <Loading></Loading>
 
     const formattedDate = transaction.date?.slice(0, 10) || "";
 

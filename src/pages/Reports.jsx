@@ -4,6 +4,7 @@ import {
     BarChart, Bar, CartesianGrid, XAxis, YAxis, ResponsiveContainer
 } from "recharts";
 import { AuthContext } from "../Provider/AuthProvider";
+import Loading from "./Loading";
 
 
 const colors = [
@@ -63,7 +64,7 @@ const Reports = () => {
         fetchTransactions();
     }, [user?.email]);
 
-    if (loading) return <p className="text-center mt-10">Loading...</p>;
+    if (loading) return <Loading></Loading>
 
     return (
         <>

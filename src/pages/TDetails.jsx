@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import Loading from "./Loading";
 
 const TDetails = () => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const TDetails = () => {
     fetchTransaction();
   }, [id]);
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (loading) return <Loading></Loading>
   if (!transaction)
     return <p className="text-center mt-10">Transaction not found.</p>;
 
