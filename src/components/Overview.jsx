@@ -4,7 +4,7 @@ import { ArrowDownCircle, ArrowUpCircle, Wallet } from "lucide-react";
 
 const Overview = () => {
     const { user, loading, setLoading } = useContext(AuthContext);
-    const [overview, setOverview] = useState({});
+    const [overview, setOverview] = useState({balance:0,totalIncome:0,totalExpenses:0});
 
 
     useEffect(() => {

@@ -22,8 +22,7 @@ const Navbar = () => {
                 </NavLink>
             </li>
 
-            {user && (
-                <>
+           
                     <li>
                         <NavLink to="/add-transaction" className="font-medium hover:text-[#5C7AEA]">
                             Add Transaction
@@ -39,8 +38,7 @@ const Navbar = () => {
                             Reports
                         </NavLink>
                     </li>
-                </>
-            )}
+               
         </>
     );
 

@@ -10,6 +10,7 @@ import Register from "../pages/Register";
 import UpdateTransaction from "../pages/UpdateTransaction";
 import TDetails from "../pages/TDetails";
 import MyProfile from "../pages/MyProfile";
+import PrivateRoute from "../Provider/PrivateRouter";
 
 
 
@@ -25,23 +26,23 @@ import MyProfile from "../pages/MyProfile";
             },
             {
                 path:'add-transaction',
-                element:<AddTransaction/>
+                element:<PrivateRoute><AddTransaction/></PrivateRoute>
             },
             {
                 path:'my-transactions',
-                element:<MyTransactions/>
+                element:<PrivateRoute><MyTransactions/></PrivateRoute>
             },
             {
                 path:'reports',
-                element: <Reports/>
+                element: <PrivateRoute><Reports/></PrivateRoute>
             },
             {
                 path:'transaction/update/:id',
-                element:<UpdateTransaction></UpdateTransaction>
+                element:<PrivateRoute><UpdateTransaction></UpdateTransaction></PrivateRoute>
             },
             {
                 path:'transaction/:id',
-                element:<TDetails/>
+                element:<PrivateRoute><TDetails/></PrivateRoute>
             }
         ]
     },
@@ -59,7 +60,7 @@ import MyProfile from "../pages/MyProfile";
             },
             {
                 path:'/auth/myProfile',
-                element:<MyProfile/>
+                element:<PrivateRoute><MyProfile/></PrivateRoute>
             }
            
             
