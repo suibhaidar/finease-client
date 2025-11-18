@@ -83,7 +83,7 @@ const Register = () => {
 
                             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
 
-                            <button type='submit' className="btn btn-neutral mt-4 w-full">Register</button>
+                            <button type='submit' className="btn btn-neutral bg-gradient-to-r from-[#1C352D] to-[#6AA97B] mt-4 w-full">Register</button>
                         </fieldset>
                     </form>
 

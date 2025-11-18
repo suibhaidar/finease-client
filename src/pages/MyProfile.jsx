@@ -28,7 +28,7 @@ const MyProfile = () => {
 
     return (
         <div className="flex justify-center w-96 mx-auto mt-14 px-4">
-            <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
+            <div className="w-full max-w-xl bg-base-200 shadow-xl rounded-2xl p-8 border border-gray-100">
                 <h1 className="text-3xl font-bold text-center text-[#1C352D] mb-8">
                     My Profile
                 </h1>

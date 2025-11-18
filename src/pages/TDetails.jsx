@@ -43,7 +43,7 @@ const TDetails = () => {
     return <p className="text-center mt-10">Transaction not found.</p>;
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+    <div className="max-w-xl mx-auto p-6 bg-base-200 rounded-lg shadow-md mt-10">
       <h2 className="text-2xl font-bold mb-4">Transaction Details</h2>
 
       <div className="mb-2">
@@ -67,7 +67,7 @@ const TDetails = () => {
         {transaction.category}
       </div>
 
-      <div className="mt-4 p-4 bg-gray-100 rounded">
+      <div className="mt-4 p-4 bg-base-200 rounded">
         <span className="font-semibold">
           Total Amount for "{transaction.category}" Category:{" "}
         </span>

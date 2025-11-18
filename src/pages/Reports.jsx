@@ -62,14 +62,14 @@ const Reports = () => {
         };
 
         fetchTransactions();
-    }, [user?.email]);
+    }, [setLoading, user.email]);
 
     if (loading) return <Loading></Loading>
 
     return (
         <>
 
-            <div className=" flex flex-col gap-5 py-6 px-3 bg-white shadow-xl rounded-xl max-w-6xl mx-auto border">
+            <div className=" flex flex-col gap-5 py-6 px-3 bg-base-200 shadow-xl rounded-xl max-w-6xl mx-auto border">
                 <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
                     Financial Reports
                 </h2>

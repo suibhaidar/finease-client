@@ -43,8 +43,8 @@ const AddTransaction = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-500 p-4">
-            <div className="w-full max-w-md bg-white shadow-xl rounded-xl p-6 sm:p-8">
+        <div className="flex justify-center items-center min-h-screen p-4">
+            <div className="w-full max-w-md bg-base-100 shadow-xl rounded-xl p-6 sm:p-8">
                 <h2 className="text-2xl font-bold mb-6 text-center text-[#1C352D]">
                     Add Transaction
                 </h2>
@@ -98,13 +98,13 @@ const AddTransaction = () => {
                         type="email"
                         value={user.email}
                         readOnly
-                        className="input input-bordered w-full bg-gray-100"
+                        className="input input-bordered w-full bg-base-100"
                     />
                     <input
                         type="text"
                         value={user.displayName}
                         readOnly
-                        className="input input-bordered w-full bg-gray-100"
+                        className="input input-bordered w-full bg-base-100"
                     />
 
                     <button

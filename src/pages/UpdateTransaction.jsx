@@ -8,7 +8,7 @@ const UpdateTransaction = () => {
     const [transaction, setTransaction] = useState(null);
     const navigate = useNavigate();
 
-    // Load Existing Data
+    
     useEffect(() => {
         fetch(`http://localhost:3000/transactions/${id}`)
             .then((res) => res.json())
@@ -39,7 +39,7 @@ const UpdateTransaction = () => {
             .then((data) => {
                 if (data.modifiedCount > 0) {
                     Swal.fire("Updated!", "Transaction Updated Successfully!", "success");
-                    navigate(`/transaction/${id}`); // redirect to details page
+                    navigate(`/transaction/${id}`); 
                 } else {
                     Swal.fire("No Changes", "Nothing was updated", "info");
                 }
@@ -87,7 +87,7 @@ const UpdateTransaction = () => {
                     <input type="date" name="date" defaultValue={formattedDate} className="input input-bordered w-full" />
                 </div>
 
-                <button className="btn btn-primary bg-[#00C9E5] w-full mt-3">Update</button>
+                <button className="btn btn-primary bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full mt-3">Update</button>
             </form>
         </div>
     );

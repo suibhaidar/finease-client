@@ -1,18 +1,25 @@
-import { signOut } from 'firebase/auth';
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
-import { auth } from '../firebase/firebase.config';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = use(AuthContext);
+    const { user,logOut } = use(AuthContext);
 
     const handleLogout = () => {
-        signOut(auth)
+                logOut()
             .then(() => console.log("User logged out"))
             .catch((err) => console.error(err));
+        
     };
+
+    const handleThemeToggle = (e) =>{
+        if (e.target.checked) {
+            document.querySelector('html').setAttribute('data-theme','dark')
+        }else {
+            document.querySelector('html').setAttribute('data-theme','light')
+        }
+    }
 
     const navLinks = (
         <>
@@ -43,7 +50,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="bg-[#d8e3f0] shadow-sm">
+        <div className="bg-base-200 shadow-sm">
             <div className="navbar container mx-auto px-3">
 
                 {/* LEFT */}
@@ -70,7 +77,7 @@ const Navbar = () => {
                 {/* RIGHT */}
                 <div className="navbar-end flex items-center gap-3">
 
-                    <input type="checkbox" defaultChecked className="toggle" />
+                    <input onChange={handleThemeToggle} type="checkbox" className="toggle" />
 
                     {user ? (
                         <>

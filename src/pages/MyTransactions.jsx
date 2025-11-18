@@ -17,7 +17,7 @@ const MyTransactions = () => {
                 });
         }
     }, [user?.email]);
-
+    
     // Delete Handler
     const handleDelete = (id) => {
         Swal.fire({
@@ -46,12 +46,9 @@ const MyTransactions = () => {
 
     return (
         <div className="max-w-6xl mx-auto p-5">
-
             <h1 className="text-3xl font-bold mb-6 text-center">
                 My Transactions ({transactions.length})
             </h1>
-
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {transactions.map((item) => (
                     <div key={item._id} className="card bg-base-100 shadow-xl border">
@@ -67,22 +64,16 @@ const MyTransactions = () => {
                                 <p><span className="font-bold">Amount:</span> ${item.amount}</p>
                             </div>
                             <div className="card-actions justify-between mt-4">
-
-
                                 <Link to={`/transaction/${item._id}`}>
                                     <button className="btn btn-sm bg-green-800 text-white">
                                         View Details
                                     </button>
                                 </Link>
-
-
                                 <Link to={`/transaction/update/${item._id}`}>
                                     <button className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white">
                                         Update
                                     </button>
                                 </Link>
-
-
                                 <button
                                     onClick={() => handleDelete(item._id)}
                                     className="btn btn-sm bg-red-800 text-white"
@@ -95,7 +86,6 @@ const MyTransactions = () => {
                     </div>
                 ))}
             </div>
-
         </div>
     );
 };
