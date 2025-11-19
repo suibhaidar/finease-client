@@ -10,7 +10,7 @@ const UpdateTransaction = () => {
 
     
     useEffect(() => {
-        fetch(`http://localhost:3000/transactions/${id}`)
+        fetch(`https://finease-server-ten.vercel.app/transactions/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 //console.log("Fetched:", data);
@@ -30,7 +30,7 @@ const UpdateTransaction = () => {
             date: form.date.value,
         };
 
-        fetch(`http://localhost:3000/transactions/${id}`, {
+        fetch(`https://finease-server-ten.vercel.app/transactions/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedData),

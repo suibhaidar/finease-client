@@ -5,9 +5,10 @@ FinEase is a modern Single Page Application (SPA) that allows users to track inc
 ---
 
 ##  Live Links
-- **Client:**  
-- **Server:**  
+- **Client:**  https://finease-ph12.netlify.app/
+- **Server:**  https://finease-server-ten.vercel.app/
 
+---
 
 ### Key Features of FinEase
 
@@ -16,6 +17,9 @@ FinEase is a modern Single Page Application (SPA) that allows users to track inc
 -  **Real-Time Dashboard** — Dynamic overview of balance, income, and expenses
 -  **Interactive Reports** — Category-wise Pie Charts & Monthly Bar Charts
 -  **User Profile & Protected Routes** — Update profile, secure private pages, SPA reload safe
+
+
+---
 
 ##  Tech Stack
 

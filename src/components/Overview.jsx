@@ -12,7 +12,7 @@ const Overview = () => {
 
         const fetchTransactions = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/transactions?email=${user.email}`);
+                const res = await fetch(`https://finease-server-ten.vercel.app/transactions?email=${user.email}`);
                 const transactions = await res.json();
 
                 let totalIncome = 0;

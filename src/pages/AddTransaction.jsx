@@ -27,7 +27,7 @@ const AddTransaction = () => {
         };
         console.log(user.email)
         try {
-            const res = await fetch("http://localhost:3000/transactions", {
+            const res = await fetch("https://finease-server-ten.vercel.app/transactions", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(transaction),

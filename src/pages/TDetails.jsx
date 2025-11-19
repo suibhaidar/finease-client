@@ -12,13 +12,13 @@ const TDetails = () => {
     const fetchTransaction = async () => {
       try {
         // 1️⃣ Fetch single transaction
-        const res = await fetch(`http://localhost:3000/transactions/${id}`);
+        const res = await fetch(`https://finease-server-ten.vercel.app/transactions/${id}`);
         const data = await res.json();
         setTransaction(data);
 
         // 2️⃣ Fetch all transactions for this email
         const allRes = await fetch(
-          `http://localhost:3000/transactions?email=${data.email}`
+          `https://finease-server-ten.vercel.app/transactions?email=${data.email}`
         );
         const allTransactions = await allRes.json();
 

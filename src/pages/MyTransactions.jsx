@@ -10,7 +10,7 @@ const MyTransactions = () => {
     // Fetch User Specific Transactions
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:3000/transactions?email=${user.email}`)
+            fetch(`https://finease-server-ten.vercel.app/transactions?email=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setTransactions(data);
@@ -31,7 +31,7 @@ const MyTransactions = () => {
             confirmButtonText: "Yes, Delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/transactions/${id}`, {
+                fetch(`https://finease-server-ten.vercel.app/transactions/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
