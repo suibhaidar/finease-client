@@ -8,6 +8,7 @@ FinEase is a modern Single Page Application (SPA) that allows users to track inc
 - **Client:**  https://finease-ph12.netlify.app/
 - **Server:**  https://finease-server-ten.vercel.app/
 
+
 ---
 
 ### Key Features of FinEase
@@ -34,7 +35,6 @@ FinEase is a modern Single Page Application (SPA) that allows users to track inc
 ### Backend
 - Node.js & Express.js  
 - MongoDB (Mongoose)  
-- JWT Authentication  
 - CORS, dotenv  
 - Deployed on Vercel  
 
