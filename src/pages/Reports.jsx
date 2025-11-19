@@ -70,12 +70,12 @@ const Reports = () => {
         <>
 
             <div className=" flex flex-col gap-5 py-6 px-3 bg-base-200 shadow-xl rounded-xl max-w-6xl mx-auto border">
-                <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+                <h2 className="text-3xl font-bold mb-8 text-center text-primary">
                     Financial Reports
                 </h2>
                 <div className="flex justify-center w-full border shadow-xl rounded-xl">
                     <div className="w-full py-4 px-6">
-                        <h3 className="text-xl font-semibold mb-4 text-center text-gray-700">
+                        <h3 className="text-xl font-semibold mb-4 text-center text-secondary">
                             Category Breakdown
                         </h3>
 
@@ -102,7 +102,7 @@ const Reports = () => {
                 </div>
                 <div className="flex justify-center w-full border shadow-xl rounded-xl" >
                     <div className="w-full">
-                        <h3 className="text-xl font-semibold mb-4 text-center text-gray-700">
+                        <h3 className="text-xl font-semibold mb-4 text-center text-secondary">
                             Monthly Summary
                         </h3>
 

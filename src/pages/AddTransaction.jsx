@@ -45,7 +45,7 @@ const AddTransaction = () => {
     return (
         <div className="flex justify-center items-center min-h-screen p-4">
             <div className="w-full max-w-md bg-base-100 shadow-xl rounded-xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 text-center text-[#1C352D]">
+                <h2 className="text-2xl font-bold mb-6 text-center text-primary">
                     Add Transaction
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -109,7 +109,7 @@ const AddTransaction = () => {
 
                     <button
                         type="submit"
-                        className="btn bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full text-white font-semibold"
+                        className="btn bg-gradient-to-r from-[#0F1D46] to-[#01b2ca] w-full text-white font-semibold"
                     >
                         Add Transaction
                     </button>

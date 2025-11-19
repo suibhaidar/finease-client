@@ -11,6 +11,7 @@ import UpdateTransaction from "../pages/UpdateTransaction";
 import TDetails from "../pages/TDetails";
 import MyProfile from "../pages/MyProfile";
 import PrivateRoute from "../Provider/PrivateRouter";
+import Error from "../pages/Error";
 
 
 
@@ -19,6 +20,7 @@ import PrivateRoute from "../Provider/PrivateRouter";
     {
         path: '/',
         element: <MainLayout/>,
+        errorElement:<Error></Error>,
         children: [
             {
                 path: '/',
@@ -49,6 +51,7 @@ import PrivateRoute from "../Provider/PrivateRouter";
     {
         path: '/auth',
         element:<AuthLayout/>,
+        errorElement:<Error></Error>,
         children:[
             {
                 path:'/auth/login',

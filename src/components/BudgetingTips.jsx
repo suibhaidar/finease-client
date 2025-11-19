@@ -48,7 +48,7 @@ const BudgetingTips = () => {
                         <span
                             className="absolute top-0 right-0 h-full w-16 sm:w-20 flex items-center justify-center text-lg sm:text-xl text-white"
                             style={{
-                                background: "#1C352D",
+                                background: "#0F1D46",
                                 clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                             }}
                         >
@@ -56,12 +56,12 @@ const BudgetingTips = () => {
                         </span>
                     </div>
 
-                    <p className="text-[#1C352D] text-2xl sm:text-3xl mb-5 font-semibold mt-2">
+                    <p className="text-primary text-2xl sm:text-3xl mb-5 font-semibold mt-2">
                         Learn how to take control of your money with these simple and effective budgeting strategies.
                     </p>
                 </div>
 
-                <div className="bg-white flex flex-col lg:flex-row items-center justify-between gap-10 mt-6">
+                <div className=" flex flex-col lg:flex-row items-center justify-between gap-10 mt-6">
                     {/* Image Side */}
                     <div className="lg:w-1/2 w-full">
                         <img
@@ -78,8 +78,8 @@ const BudgetingTips = () => {
                                 <div key={index} className="flex items-start gap-4">
                                     {tip.icon}
                                     <div>
-                                        <h4 className="font-semibold text-gray-800">{tip.title}</h4>
-                                        <p className="text-gray-600 text-sm">{tip.desc}</p>
+                                        <h4 className="font-semibold">{tip.title}</h4>
+                                        <p className=" text-sm text-accent">{tip.desc}</p>
                                     </div>
                                 </div>
                             ))}

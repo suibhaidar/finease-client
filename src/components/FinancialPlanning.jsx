@@ -35,7 +35,7 @@ const points = [
 
 const FinancialPlanning = () => {
     return (
-        <section className="bg-gray-50 py-16 px-6 md:px-20 text-center md:text-left">
+        <section className="bg-base-100 py-16 px-6 md:px-20 text-center md:text-left">
             <div className="max-w-5xl mx-auto">
                 {/* head */}
                 <div className="relative inline-block">
@@ -51,14 +51,14 @@ const FinancialPlanning = () => {
                     <span
                         className="absolute top-0 right-0 h-full w-24 flex items-center justify-center text-xl text-white"
                         style={{
-                            background: "#1C352D",
+                            background: "#0F1D46",
                             clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                         }}
                     >
                         ↓
                     </span>
                 </div>
-                <p className="text-[#1C352D] text-3xl mb-5 font-semibold">
+                <p className="text-primary text-3xl mb-5 font-semibold">
                     Financial planning isn’t just about money — it’s about building a stress-free life.
                     These key points highlight why financial planning is so essential.
                 </p>
@@ -66,12 +66,12 @@ const FinancialPlanning = () => {
                     {points.map((point, index) => (
                         <div
                             key={index}
-                            className="flex items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-md transition duration-300"
+                            className="flex items-start gap-4 bg-base-100 p-5 rounded-xl shadow hover:shadow-md transition duration-300"
                         >
                             {point.icon}
                             <div>
-                                <h4 className="font-semibold text-gray-800">{point.title}</h4>
-                                <p className="text-gray-600 text-sm">{point.desc}</p>
+                                <h4 className="font-semibold">{point.title}</h4>
+                                <p className=" text-sm text-accent">{point.desc}</p>
                             </div>
                         </div>
                     ))}

@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
-
+import navbarImg from '../assets/Adobe Express - file (1).png';
 const Navbar = () => {
 
     const { user,logOut } = use(AuthContext);
@@ -24,7 +24,7 @@ const Navbar = () => {
     const navLinks = (
         <>
             <li>
-                <NavLink to="/" className="font-medium text-[#0e2820] hover:text-[#5C7AEA]">
+                <NavLink to="/" className="font-medium hover:text-[#5C7AEA]">
                     Home
                 </NavLink>
             </li>
@@ -57,12 +57,13 @@ const Navbar = () => {
                 <div className="navbar-start">
                     <div className="flex items-center relative">
                         <img
-                            src="https://i.ibb.co.com/JRT4DXCK/Adobe-Express-file.png"
+                            src={navbarImg}
+                            // "https://i.ibb.co.com/JRT4DXCK/Adobe-Express-file.png"
                             alt="FinEase Logo"
-                            className="w-12 h-12 rounded-full"
+                            className="w-12 h-14 rounded-full"
                         />
-                        <Link to="/" className="text-2xl font-bold text-[#1C352D] absolute left-7">
-                            <span className="text-[#61839B]">Fin</span>Ease
+                        <Link to="/" className="text-2xl font-bold text-primary absolute left-7">
+                            <span className="text-secondary">Fin</span>Ease
                         </Link>
                     </div>
                 </div>
@@ -84,7 +85,7 @@ const Navbar = () => {
                             {/* My Profile - Desktop + Mobile */}
                             <Link
                                 to="/auth/myProfile"
-                                className="btn btn-outline btn-sm hidden lg:block"
+                                className="btn btn-outline btn-sm hidden lg:block items-center "
                             >
                                 My Profile
                             </Link>
@@ -111,16 +112,16 @@ const Navbar = () => {
                                             alt="User"
                                         />
                                     </li>
-                                    <li className="font-semibold text-gray-700">
+                                    <li className="font-semibold">
                                         Name: {user.displayName || "User"}
                                     </li>
-                                    <li className="text-sm text-gray-500">
+                                    <li className="text-sm">
                                         Email: {user.email}
                                     </li>
                                     <li>
                                         <button
                                             onClick={handleLogout}
-                                            className="btn btn-outline btn-sm w-full mt-2 bg-[#1C352D] text-white"
+                                            className="btn btn-outline btn-sm w-full mt-2 bg-primary text-white"
                                         >
                                             Logout
                                         </button>
@@ -132,13 +133,13 @@ const Navbar = () => {
                         <div className="space-x-3 hidden lg:flex">
                             <Link
                                 to="/auth/login"
-                                className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]"
+                                className="btn btn-outline btn-sm border-secondary text-primary"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/auth/register"
-                                className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white"
+                                className="btn btn-sm bg-gradient-to-r from-[#0F1D46] to-[#01b2ca] text-base-100"
                             >
                                 Signup
                             </Link>
@@ -174,13 +175,13 @@ const Navbar = () => {
                                 <div className="flex flex-col gap-2 mt-2">
                                     <Link
                                         to="/auth/login"
-                                        className="btn btn-outline btn-sm border-[#1C352D] text-[#5C7AEA]"
+                                        className="btn btn-outline btn-sm border-secondary text-primary"
                                     >
                                         Login
                                     </Link>
                                     <Link
                                         to="/auth/register"
-                                        className="btn btn-sm bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white"
+                                        className="btn btn-sm bg-gradient-to-r from-[#0F1D46] to-[#01b2ca] text-primary"
                                     >
                                         Signup
                                     </Link>
@@ -197,7 +198,7 @@ const Navbar = () => {
                                     </Link>
                                     <button
                                         onClick={handleLogout}
-                                        className="btn btn-sm bg-[#1C352D] text-white"
+                                        className="btn btn-sm bg-primary text-base-100"
                                     >
                                         Logout
                                     </button>

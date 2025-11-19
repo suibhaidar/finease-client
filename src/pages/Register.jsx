@@ -61,7 +61,7 @@ const Register = () => {
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
-                <h2 className='font-semibold text-2xl text-center'>Register your account</h2>
+                <h2 className='font-semibold text-2xl text-center text-primary'>Register your account</h2>
                 <div className='card-body'>
                     <form onSubmit={handleRegister}>
                         <fieldset>
@@ -83,7 +83,7 @@ const Register = () => {
 
                             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
 
-                            <button type='submit' className="btn btn-neutral bg-gradient-to-r from-[#1C352D] to-[#6AA97B] mt-4 w-full">Register</button>
+                            <button type='submit' className="btn btn-neutral bg-gradient-to-r from-[#0F1D46] to-[#01b2ca] mt-4 w-full">Register</button>
                         </fieldset>
                     </form>
 
@@ -107,7 +107,7 @@ const Register = () => {
                         Already Have An Account? <Link className='text-secondary' to="/auth/login">Login</Link>
                     </p>
                     <p className='text-center font-semibold text-xs mt-1'>
-                        By creating an account, I agree to Pngtree's Terms of Service, Privacy Policy, and Intellectual Property Rights
+                        By creating an account, I agree to FinEas's Terms of Service, Privacy Policy, and Intellectual Property Rights
                     </p>
                 </div>
             </div>

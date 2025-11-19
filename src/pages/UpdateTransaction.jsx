@@ -13,7 +13,7 @@ const UpdateTransaction = () => {
         fetch(`http://localhost:3000/transactions/${id}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log("Fetched:", data);
+                //console.log("Fetched:", data);
                 setTransaction(data);
             });
     }, [id]);
@@ -55,7 +55,7 @@ const UpdateTransaction = () => {
 
     return (
         <div className="max-w-xl mx-auto p-5">
-            <h1 className="text-3xl font-bold text-center mb-6">Update Transaction</h1>
+            <h1 className="text-3xl font-bold text-center text-primary mb-6">Update Transaction</h1>
 
             <form onSubmit={handleUpdate} className="card bg-base-100 shadow-xl p-6 border space-y-4">
 
@@ -87,7 +87,7 @@ const UpdateTransaction = () => {
                     <input type="date" name="date" defaultValue={formattedDate} className="input input-bordered w-full" />
                 </div>
 
-                <button className="btn btn-primary bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full mt-3">Update</button>
+                <button className="btn btn-primary bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-base-100 w-full mt-3">Update</button>
             </form>
         </div>
     );

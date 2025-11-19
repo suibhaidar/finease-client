@@ -33,19 +33,21 @@ const Hero = () => {
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                    <section className="w-full flex items-center bg-[#678b9e] relative min-h-[45vh] md:min-h-[75vh]">
+                    <section className="w-full flex items-center bg-[#467189] relative min-h-[45vh] md:min-h-[75vh]">
                         <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 relative">
 
                             {/* Left: Text */}
                             <div className="w-full md:w-1/2 md:mb-0 text-center ml-10">
-                                <h1 className="text-4xl md:text-6xl font-bold mb1 text-[#1C352D]">
+                                <h1 className="text-4xl md:text-6xl font-bold mb1 text-secondary">
                                     {slide.tagline}
                                 </h1>
-                               
+
                                 <p className="text-sm md:text-base mb-4 text-gray-100/90">
                                     {slide.subtitle}
                                 </p>
-                                <Link className="bg-gradient-to-r from-[#1C352D] to-[#6AA97B] text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
+                                <Link className="bg-gradient-to-b from-[#0F1D46] to-[#01b2ca] text-white font-semibold px-6 py-3 rounded-lg transition duration-300"
+                                to="/auth/register"
+                                >
                                     Get Started
                                 </Link>
                             </div>
@@ -57,7 +59,7 @@ const Hero = () => {
                                     alt={`Slide ${index + 1}`}
                                     className="w-full max-w-md object-contain rounded-xl shadow-2xl"
                                 />
-                                
+
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl flex items-center md:max-w-11/12 mx-auto" >
                                 </div>
                             </div>

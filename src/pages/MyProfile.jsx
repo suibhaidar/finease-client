@@ -29,7 +29,7 @@ const MyProfile = () => {
     return (
         <div className="flex justify-center w-96 mx-auto mt-14 px-4">
             <div className="w-full max-w-xl bg-base-200 shadow-xl rounded-2xl p-8 border border-gray-100">
-                <h1 className="text-3xl font-bold text-center text-[#1C352D] mb-8">
+                <h1 className="text-3xl font-bold text-center text-primary mb-8">
                     My Profile
                 </h1>
                 <div className="flex flex-col items-center mb-8">
@@ -38,11 +38,11 @@ const MyProfile = () => {
                         alt="profile"
                         className="w-35 h-35 rounded-full border-4 border-[#3b82f6] shadow-md object-cover"
                     />
-                    <p className="mt-3 text-gray-700 font-medium">{user?.email}</p>
+                    <p className="mt-3 text-secondary font-medium">{user?.email}</p>
                 </div>
                 <div className="space-y-5">
                     <div>
-                        <label className="block mb-1 font-semibold text-gray-700">
+                        <label className="block mb-1 font-semibold">
                             Full Name
                         </label>
                         <input
@@ -50,11 +50,11 @@ const MyProfile = () => {
                             defaultValue={user?.displayName}
                             type="text"
                             placeholder="Enter your name"
-                            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition"
+                            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
                         />
                     </div>
                     <div>
-                        <label className="block mb-1 font-semibold text-gray-700">
+                        <label className="block mb-1 font-semibold">
                             Photo URL
                         </label>
                         <input
@@ -62,12 +62,12 @@ const MyProfile = () => {
                             defaultValue={user?.photoURL}
                             type="text"
                             placeholder="Enter photo URL"
-                            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition"
+                            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition"
                         />
                     </div>
                     <button
                         onClick={handleUpdateProfile}
-                        className="bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full text-white font-semibold py-2 rounded-lg hover:bg-[#2563eb] transition shadow-md"
+                        className="bg-gradient-to-r from-[#1C352D] to-[#6AA97B] w-full text-base-100 font-semibold py-2 rounded-lg hover:bg-[#2563eb] transition shadow-md"
                     >
                         Update Profile
                     </button>
