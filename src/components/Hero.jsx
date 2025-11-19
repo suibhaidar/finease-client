@@ -56,7 +56,7 @@ const Hero = () => {
                             <div className="w-full md:w-1/2 justify-center hidden md:flex">
                                 <img
                                     src={slide.image}
-                                    alt={`Slide ${index + 1}`}
+                                    alt=""
                                     className="w-full max-w-md object-contain rounded-xl shadow-2xl"
                                 />
 

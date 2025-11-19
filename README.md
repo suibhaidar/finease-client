@@ -1,16 +1,38 @@
-# React + Vite
+#  FinEase — Personal Finance Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FinEase is a modern Single Page Application (SPA) that allows users to track income and expenses, manage transactions, analyze financial reports, and update their profiles. It uses Firebase Authentication for secure login and MongoDB as the backend database.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Live Links
+- **Client:**  
+- **Server:**  
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Key Features of FinEase
 
-## Expanding the ESLint configuration
+-  **Secure Authentication** — Email/Password & Google Sign-In with strong validation
+-  **Transaction Management** — Add, View, Update, Delete with backend sorting
+-  **Real-Time Dashboard** — Dynamic overview of balance, income, and expenses
+-  **Interactive Reports** — Category-wise Pie Charts & Monthly Bar Charts
+-  **User Profile & Protected Routes** — Update profile, secure private pages, SPA reload safe
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Tech Stack
+
+### Frontend
+- React.js  
+- React Router  
+- Firebase Authentication  
+- Tailwind CSS  
+- SweetAlert2 / React Hot Toast  
+- Recharts  
+
+### Backend
+- Node.js & Express.js  
+- MongoDB (Mongoose)  
+- JWT Authentication  
+- CORS, dotenv  
+- Deployed on Vercel  
+
+---
+
